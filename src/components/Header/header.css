@@ -1,0 +1,51 @@
+.carousel-container .prev-btn {
+    background-color: var(--color-secondary);
+    border-radius: var(--br-max);
+    top: 50%;
+    left: 3%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel-container img {
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.carousel-overlay-text-container {
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+}
+
+.carousel-container .next-btn {
+    background-color: var(--color-secondary);
+    border-radius: var(--br-max);
+    top: 50%;
+    right: 3%;
+    transform: translate(50%, -50%);
+}
+
+.carousel-indicators {
+    bottom: 7%;
+    left: 50%;
+    transform: translate(-100%, 10%);
+    list-style: none;
+}
+
+.carousel-indicators li {
+    background-color: var(--color-secondary);
+    width: 1.5rem;
+	height: 1.5rem;
+    border-radius: var(--br-max);
+}
+
+.carousel-indicators li:hover {
+    background-color: var(--color-primary);
+    transform: scale(1.3);
+    transition: transform 300ms ease;
+}
+
+.carousel-indicators li.active {
+    background-color: var(--color-primary);
+}

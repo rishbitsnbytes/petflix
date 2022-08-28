@@ -1,0 +1,15 @@
+.nav-bar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: var(--color-secondary-bg);
+    color: var(--color-text-primary);
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+}
+
+.nav-bar .active-link {
+    color: var(--color-tertiary);
+    font-weight: var(--weight-bold);
+}

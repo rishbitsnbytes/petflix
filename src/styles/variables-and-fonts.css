@@ -10,15 +10,43 @@
     /* Color Variables */
 
     /* Body or Main Colors */
-    --color-primary: #99E1D9; 
-    --color-secondary: #133B5C;
-    --color-tertiary: #86BBD8;
-    --color-quarternary: #2C394B;
 
-    --color-bg: #03172C;;
-    --color-primary-bg: #03172C;
-    --color-secondary-bg: #082032;
-    --color-tertiary-bg: #041C32;
+    /* Dark Theme Color Variables */
+    --color-primary-dark: #99E1D9; 
+    --color-secondary-dark: #133B5C;
+    --color-tertiary-dark: #86BBD8;
+    --color-quarternary-dark: #2C394B;
+
+    --color-bg-dark: #082032;
+    --color-primary-bg-dark: #082032;
+    --color-secondary-bg-dark: #03172C;
+    --color-tertiary-bg-dark: #041C32;
+
+    /* Typography Colors */
+    --color-text-primary-dark: var(--white-shade-1);
+    --color-text-heading-dark:   var(--white);
+    --color-text-sub-heading-dark: var(--white);
+    --color-text-dimmed-dark: var(--gray-9);
+    --color-text-active-dark: var(--color-tertiary);
+
+    /* Light Theme Color Variables */
+    --color-primary-light: #133B5C;
+    --color-secondary-light: #2C394B;
+    --color-tertiary-light: #86BBD8;
+    --color-quarternary-light: #99E1D9;;
+
+    --color-bg-light: #FAFAFA;
+    --color-primary-bg-light: #FAFAFA;
+    --color-secondary-bg-light: #c5dedd;
+    --color-tertiary-bg-light: #041C32;
+
+    /* Typography Colors */
+    --color-text-primary-light: var(--black-shade-2);
+    --color-text-heading-light:   var(--black);
+    --color-text-sub-heading-light: var(--black-shade-1);
+    --color-text-dimmed-light: var(--gray-9);
+    --color-text-active-light: var(--color-tertiary-dark);
+
 
     /* Declarative Commonly used colors */
     --gray-1: #F5F5F5;
@@ -35,12 +63,8 @@
     --black-shade-2: #101010;
     --black-shade-3: #080808;
 
-    /* Typography Colors */
-    --color-text-primary: var(--white-shade-1);
-    --color-text-heading:   var(--white);
-    --color-text-sub-heading: var(--white);
-    --color-text-dimmed: var(--gray-9);
-    --color-text-active: var(--color-tertiary);
+    /* Background Overlay Color */
+    --color-overlay-bg: rgba(0, 0, 0, 0.5);
 
     /* Shadow Colors */
     --color-shadow-bg: var(--gray-9);
@@ -51,7 +75,7 @@
 
     /* Input Form colors */
     --color-form-element-border: var(--black);
-    --color-form-element-border-focus: var(--color-primary);
+    --color-form-element-border-focus: var(--color-primary-dark);
     --color-form-element-border-error: var(--color-error);
     --color-form-text-placeholder: var(--gray-4);
     --color-form-element-disabled: var(--gray-9);
@@ -79,4 +103,44 @@
     --color-badge-text: #ffffff;
 
     /* End of Color Variables*/
+}
+
+.app-dark * {
+        /* Dark Theme Color Variables */
+    --color-primary: #99E1D9; 
+    --color-secondary: #133B5C;
+    --color-tertiary: #86BBD8;
+    --color-quarternary: #2C394B;
+
+    --color-bg: #082032;
+    --color-primary-bg: #082032;
+    --color-secondary-bg: #03172C;
+    --color-tertiary-bg: #041C32;
+
+    /* Typography Colors */
+    --color-text-primary: var(--white-shade-1);
+    --color-text-heading:   var(--white);
+    --color-text-sub-heading: var(--white);
+    --color-text-dimmed: var(--gray-9);
+    --color-text-active: var(--color-tertiary);
+}
+
+.app-light * {
+        /* Light Theme Color Variables */
+    --color-primary: #133B5C;
+    --color-secondary: #86BBD8;
+    --color-tertiary: #99E1D9;
+    --color-quarternary: #2C394B;
+
+    --color-bg: #FAFAFA;
+    --color-primary-bg: #FAFAFA;
+    --color-secondary-bg: #86BBD8;
+    --color-tertiary-bg: #041C32;
+
+    /* Typography Colors */
+    --color-text-primary: var(--black-shade-2);
+    --color-text-heading:   var(--black);
+    --color-text-sub-heading: var(--black-shade-1);
+    --color-text-dimmed: var(--gray-9);
+    --color-text-active: var(--color-tertiary-dark);
 }
