@@ -47,7 +47,7 @@ const Header = () => {
                   <h1 className="color-primary h1">{carouselText}</h1>
                   <Link
                     to="/videos"
-                    className="w-full btn btn-primary  h-full px-2 py-1 rounded-md"
+                    className="btn btn-primary h-full px-2 py-1 rounded-md"
                   >
                     Watch Now
                     <i className="ml-1 fa-regular fa-circle-play fa-lg"></i>
