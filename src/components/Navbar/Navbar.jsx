@@ -1,8 +1,8 @@
 import "./navbar.css";
 import petflixLogoDark from "assets/others/petflix-logo-dark-gif.gif";
 import petflixLogoLight from "assets/others/petflix-logo-light-gif.gif";
-import { SearchBar } from "components";
-import { useTheme } from "contexts";
+import { SearchBar, Logout } from "components";
+import { useTheme, useAuth } from "contexts";
 import { Link, NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
@@ -10,6 +10,7 @@ import { useEffect } from "react";
 const Navbar = () => {
   const { pathname } = useLocation();
   const { theme, setTheme } = useTheme();
+  const { authDispatch, isAuth, authLoading } = useAuth();
 
   const handleThemeChange = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
@@ -22,7 +23,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    localStorage.setItem("stream-tunes-theme", theme);
+    localStorage.setItem("petflix-theme", theme);
   }, [theme]);
 
   return (
@@ -80,6 +81,7 @@ const Navbar = () => {
           >
             <i className="fa-solid fa-sun fa-xl" />
           </button>
+          {isAuth && <Logout iconButton />}
         </div>
       </div>
     </nav>

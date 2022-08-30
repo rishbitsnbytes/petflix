@@ -3,7 +3,10 @@ import notFoundImage from "assets/others/not-found-image.svg";
 
 const NotFoundPage = () => {
   return (
-    <div className="main-not-found flex-col flex-align-center flex-justify-center gap-5">
+    <div
+      className="main-not-found flex-col flex-align-center flex-justify-center gap-5"
+      style={{ minHeight: "100vh" }}
+    >
       <h1>404, Sorry this page doesn't exist!! Try later.</h1>
       <img
         src={notFoundImage}

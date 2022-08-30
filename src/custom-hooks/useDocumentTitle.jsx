@@ -2,7 +2,7 @@ const useDocumentTitle = () => {
   const setDocumentTitle = (title) => {
     return (document.title = title);
   };
-  return [setDocumentTitle];
+  return setDocumentTitle;
 };
 
 export { useDocumentTitle };
