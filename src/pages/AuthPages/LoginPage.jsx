@@ -28,7 +28,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (isAuth) {
-      navigate("/profile", { replace: true });
+      navigate("/", { replace: true });
     }
     setDocumentTitle("Petflix | Login");
   }, []);
@@ -104,7 +104,7 @@ const LoginPage = () => {
 
   return (
     <section
-      className="main auth-main flex-col flex-align-center flex-justify-center mx-auto py-2 px-3"
+      className="main auth-main flex-col flex-align-center flex-justify-center mx-auto py-2 px-3 w-full"
       style={{ minHeight: "100vh" }}
     >
       <div className="auth-wrapper">

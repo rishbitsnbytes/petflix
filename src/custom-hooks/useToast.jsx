@@ -8,8 +8,8 @@ const useToast = () => {
     const notify = () => {
       toast[toastTheme](toastText, {
         theme: "colored",
-        position: "top-right",
-        autoClose: 1500,
+        position: "bottom-center",
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,

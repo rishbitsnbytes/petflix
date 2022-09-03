@@ -2,15 +2,17 @@ import "./navbar.css";
 import petflixLogoDark from "assets/others/petflix-logo-dark-gif.gif";
 import petflixLogoLight from "assets/others/petflix-logo-light-gif.gif";
 import { SearchBar, Logout } from "components";
-import { useTheme, useAuth } from "contexts";
+import { useTheme, useAuth, useVideos } from "contexts";
 import { Link, NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const { pathname } = useLocation();
   const { theme, setTheme } = useTheme();
   const { authDispatch, isAuth, authLoading } = useAuth();
+  const { videosSearchText } = useVideos();
+  const [searchText, setSearchText] = useState(videosSearchText);
 
   const handleThemeChange = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
@@ -50,7 +52,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* search bar */}
-        <SearchBar />
+        <SearchBar searchText={searchText} setSearchText={setSearchText} />
         {/* Icons and Buttons */}
         <div className="nav-actions-container flex-row flex-justify-between flex-align-center gap-2">
           <NavLink to="/home" className={getActiveStyles}>
@@ -61,18 +63,6 @@ const Navbar = () => {
             <span className="h4 font-bold">Explore</span>{" "}
             <i className="fa-solid fa-compass" />
           </NavLink>
-          <NavLink
-            to="/login"
-            className={`btn relative mx-0-5 my-1 w-max h-max ${
-              pathname === "/sign-up" ||
-              pathname === "/login" ||
-              pathname === "/profile"
-                ? "active-link"
-                : ""
-            }`}
-          >
-            <i className="fa-solid fa-user fa-xl" />
-          </NavLink>
           <button
             className={`btn relative mx-0-5 my-1 w-max h-max ${
               false ? "active-link" : ""
@@ -81,7 +71,20 @@ const Navbar = () => {
           >
             <i className="fa-solid fa-sun fa-xl" />
           </button>
-          {isAuth && <Logout iconButton />}
+          {isAuth ? (
+            <Logout iconButton />
+          ) : (
+            <NavLink
+              to="/login"
+              className={`btn relative mx-0-5 my-1 w-max h-max ${
+                pathname === "/sign-up" || pathname === "/login"
+                  ? "active-link"
+                  : ""
+              }`}
+            >
+              <i className="fa-solid fa-user fa-xl" />
+            </NavLink>
+          )}
         </div>
       </div>
     </nav>

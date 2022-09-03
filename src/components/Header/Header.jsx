@@ -46,14 +46,14 @@ const Header = () => {
                 <div className="carousel-overlay-text-container absolute flex-col flex-justify-center flex-align-center gap-2 w-fit">
                   <h1 className="color-primary h1">{carouselText}</h1>
                   <Link
-                    to="/videos"
+                    to="/explore"
                     className="btn btn-primary h-full px-2 py-1 rounded-md"
                   >
-                    Watch Now
+                    Explore Now
                     <i className="ml-1 fa-regular fa-circle-play fa-lg"></i>
                   </Link>
                 </div>
-                <Link to="/videos" className="w-full h-full">
+                <Link to="/explore" className="w-full h-full">
                   <img
                     className="w-full h-full rounded-md"
                     src={imgSrc}
