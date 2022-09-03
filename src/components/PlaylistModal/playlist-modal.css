@@ -1,0 +1,44 @@
+.modal-wrapper {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--color-modal-bg); 
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+    z-index: var(--z-index-modal);
+}
+
+.playlist-management-container {
+    background-color: var(--color-secondary);
+    box-shadow: 0px 0px 10px 1px var(--color-tertiary);
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    overflow: scroll;
+}
+
+.playlist-option input[type="checkbox"] {
+    color: var(--color-tertiary);
+    accent-color: var(--color-tertiary);
+    width: 2rem;
+    height: 2rem;
+}
+
+.btn-close-modal {
+    position: absolute;
+    right:  1.25rem;
+    top: 1.25rem;
+    z-index: 6; 
+}
+
+.input-playlist-name {
+    background-color: var(--white);
+}
+
+.input-playlist-name:focus {
+    outline: 1px solid var(--color-tertiary);
+    background-color: var(--white);
+}

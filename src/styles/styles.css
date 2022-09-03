@@ -35,3 +35,59 @@ body {
 .color-white {
     color: var(--white);
 }
+
+.color-error {
+    color: var(--color-alert-error-text);
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.align-self-start {
+   align-self: flex-start;
+}
+
+.align-self-end {
+    align-self: flex-end;
+ }
+
+
+.underline {
+    text-decoration: underline;
+}
+
+.text-truncate {
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 90%; 
+    max-width: 90%;
+    height: fit-content; 
+    white-space: nowrap;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25 1fr;
+    min-height: 100vh;
+}
+
+@media screen and (min-width: 480px) {
+    .grid-container {
+        grid-template-columns: 25rem 1fr;
+    }
+
+    .sidebar {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: block;
+    }
+}

@@ -1,5 +1,6 @@
 import { ScrollToTop } from "utils";
 import { AllProviders } from "AllProviders";
+import { ToastPortal } from "ToastPortal";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -15,6 +16,7 @@ ReactDOM.render(
       <AllProviders>
         <ScrollToTop>
           <App />
+          <ToastPortal />
         </ScrollToTop>
       </AllProviders>
     </Router>

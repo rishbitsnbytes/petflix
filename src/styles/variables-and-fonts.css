@@ -69,10 +69,6 @@
     /* Shadow Colors */
     --color-shadow-bg: var(--gray-9);
 
-    /* Modal Background Colors */
-    --color-modal-bg: rgba(229, 239, 193, 0.5);
-
-
     /* Input Form colors */
     --color-form-element-border: var(--black);
     --color-form-element-border-focus: var(--color-primary-dark);
@@ -111,17 +107,21 @@
     --color-secondary: #133B5C;
     --color-tertiary: #86BBD8;
     --color-quarternary: #2C394B;
+    --color-secondary-opaque: rgba(19, 59, 92, 0.6);
 
     --color-bg: #082032;
     --color-primary-bg: #082032;
     --color-secondary-bg: #03172C;
     --color-tertiary-bg: #041C32;
+    --color-secondary-bg-opaque: rgba(3, 23, 44, 0.8);
+    --color-modal-bg: var(--color-secondary-opaque);
 
     /* Typography Colors */
     --color-text-primary: var(--white-shade-1);
     --color-text-heading:   var(--white);
     --color-text-sub-heading: var(--white);
     --color-text-dimmed: var(--gray-9);
+    --color-text-dark: var(--black-shade-3);
     --color-text-active: var(--color-tertiary);
 }
 
@@ -131,16 +131,20 @@
     --color-secondary: #86BBD8;
     --color-tertiary: #99E1D9;
     --color-quarternary: #2C394B;
+    --color-secondary-opaque: rgba(134, 187, 216, 0.6);
 
     --color-bg: #FAFAFA;
     --color-primary-bg: #FAFAFA;
     --color-secondary-bg: #86BBD8;
     --color-tertiary-bg: #041C32;
+    --color-secondary-bg-opaque: rgba(134, 187, 216, 0.8);
+    --color-modal-bg: var(--color-secondary-opaque);
 
     /* Typography Colors */
     --color-text-primary: var(--black-shade-2);
     --color-text-heading:   var(--black);
     --color-text-sub-heading: var(--black-shade-1);
     --color-text-dimmed: var(--gray-9);
+    --color-text-dark: var(--black-shade-3);
     --color-text-active: var(--color-tertiary-dark);
 }

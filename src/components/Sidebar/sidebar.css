@@ -1,0 +1,23 @@
+.sidebar {
+    background-color: var(--color-secondary-bg);
+    position: fixed;
+    height: 100%;
+    width: 18%;
+    min-width: 20rem;
+    max-width: 25rem;
+    text-align: left;
+}
+
+.sidebar a.active{
+    background-color: var(--color-tertiary);
+}
+
+.app-dark .sidebar li:hover{
+    color: var(--color-primary);
+}
+
+.app-light .sidebar li:hover{
+    color: var(--white);
+}
+
+

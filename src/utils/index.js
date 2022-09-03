@@ -1,4 +1,9 @@
 export { ScrollToTop } from "./ScrollToTop";
 export { getFullImgUrl } from "./getFullImgUrl";
+export { findVideoInList } from "./findVideoInList";
+export { getFilteredSortedVideos } from "./getFilteredSortedVideos";
+export { likeVideoServiceCall } from "./likeVideoServiceCall";
+export { watchLaterServiceCall } from "./watchLaterServiceCall";
+export { getFormattedViews } from "./getFormattedViews";
 export { isFormDataValid } from "./isFormDataValid";
 export { logoutHandler } from "./logoutHandler";

@@ -1,21 +1,24 @@
 import { ToastContainer } from "react-toastify";
 import ReactDOM from "react-dom";
+import "react-toastify/dist/ReactToastify.css";
 
-const Portal = () => {
+const ToastPortal = () => {
   return ReactDOM.createPortal(
     <ToastContainer
-      position="top-right"
-      autoClose={1500}
+      theme="light"
+      position="bottom-center"
+      autoClose={2000}
       hideProgressBar={false}
-      newestOnTop={false}
+      newestOnTop
+      limit={3}
       closeOnClick
       rtl={false}
       pauseOnFocusLoss
       draggable
       pauseOnHover
     />,
-    document.getElementById("portal")
+    document.getElementById("toast-portal")
   );
 };
 
-export default Portal;
+export { ToastPortal };

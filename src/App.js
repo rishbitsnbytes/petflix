@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 function App() {
-  // const { theme } = useTheme();
   const { pathname } = useLocation();
   const { theme } = useTheme();
 
@@ -15,7 +14,7 @@ function App() {
       <div className="app">
         <Navbar />
         <AppRoutes />
-        {pathname === "/" ? <Footer /> : null}
+        {pathname === "/" || pathname === "/home" ? <Footer /> : null}
       </div>
     </div>
   );

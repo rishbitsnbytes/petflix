@@ -136,7 +136,7 @@ const SignupPage = () => {
 
   return (
     <section
-      className="auth-main flex-col flex-align-center flex-justify-center mx-auto py-2 px-3"
+      className="auth-main flex-col flex-align-center flex-justify-center mx-auto py-2 px-3 w-full"
       style={{ minHeight: "100vh" }}
     >
       <div className="auth-wrapper py-5">

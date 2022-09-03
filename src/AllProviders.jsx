@@ -1,11 +1,21 @@
-import { CategoriesProvider, ThemeProvider, AuthProvider } from "contexts";
+import {
+  CategoriesProvider,
+  ThemeProvider,
+  AuthProvider,
+  VideosProvider,
+  UserDataProvider,
+} from "contexts";
 
 const AllProviders = ({ children }) => {
   return (
     <AuthProvider>
-      <CategoriesProvider>
-        <ThemeProvider>{children}</ThemeProvider>
-      </CategoriesProvider>
+      <UserDataProvider>
+        <ThemeProvider>
+          <CategoriesProvider>
+            <VideosProvider>{children}</VideosProvider>
+          </CategoriesProvider>
+        </ThemeProvider>
+      </UserDataProvider>
     </AuthProvider>
   );
 };
