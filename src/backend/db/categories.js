@@ -8,20 +8,32 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "Computer Programming",
+    categoryName: "Pet Care",
     description:
-      "Computer programming is the process of designing and building an executable computer program to accomplish a specific computing",
+      "Everything you need to know related to daily pet care for their amazing well being!",
+    categoryImg:
+      "https://raw.githubusercontent.com/rishbitsnbytes/petflix/development/src/assets/categories/",
   },
   {
     _id: uuid(),
-    categoryName: "Frontend Development",
+    categoryName: "Pet Training",
     description:
-      "Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application",
+      "Explore various techniques to train your pet for variety of manners!",
+    categoryImg:
+      "https://raw.githubusercontent.com/rishbitsnbytes/petflix/development/src/assets/categories/",
   },
   {
     _id: uuid(),
-    categoryName: "Backend Development",
-    description:
-      "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
+    categoryName: "Play with Pets",
+    description: "Get your and your pet body moving for everyone's well being!",
+    categoryImg:
+      "https://raw.githubusercontent.com/rishbitsnbytes/petflix/development/src/assets/categories/",
+  },
+  {
+    _id: uuid(),
+    categoryName: "Pet Grooming",
+    description: "Groom your pet with all the creativity!",
+    categoryImg:
+      "https://raw.githubusercontent.com/rishbitsnbytes/petflix/development/src/assets/categories/",
   },
 ];

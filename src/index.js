@@ -1,5 +1,8 @@
+import { ScrollToTop } from "utils";
+import { AllProviders } from "AllProviders";
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import { makeServer } from "./server";
 
@@ -8,7 +11,16 @@ makeServer();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <AllProviders>
+        <ScrollToTop>
+          <App />
+        </ScrollToTop>
+      </AllProviders>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+// Call make Server
+makeServer();
