@@ -11,14 +11,14 @@ import React from "react";
 
 // Main HomePage Export Component
 const HomePage = () => {
-  const [setDocumentTitle] = useDocumentTitle();
+  const setDocumentTitle = useDocumentTitle();
 
   useEffect(() => {
     setDocumentTitle("Petflix | HomePage");
   }, []);
 
   return (
-    <div>
+    <div style={{ minHeight: "100vh" }}>
       <Header />
       <WatchByCategory />
     </div>
@@ -29,7 +29,7 @@ const WatchByCategory = () => {
   const { categories, categoriesLoading, categoriesError } = useCategories();
 
   return (
-    <section className="category-list container flex-col flex-align-center flex-justify-center p-3">
+    <section className="category-list container flex-col flex-align-center flex-justify-center p-3 mb-5">
       {categoriesLoading ? (
         <Loader loadingMessage="Fetching Categories..." />
       ) : categoriesError ? (
